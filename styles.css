@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center; 
+}
+h1{
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+.converter-form{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.currency-row{
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    
+
+}
+.currency-input{
+flex: 2; /* Aumenta a proporção do input em relação ao select */
+} 
+.currency-select{
+flex: 1; /* Diminui a proporção do select em relação ao input */
+}
+input, select{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    background: #f8f9fa;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+    text-align: left;
+}
+input:focus, select:focus{
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+}
+.converter-btn{
+   background: linear-gradient(45deg,#667eea,#764ba2); 
+   color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius:12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+.converter-btn:hover{
+    background: linear-gradient(45deg,#764ba2,#667eea); 
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(118, 75, 162, 0.4);
+}
+.loading{
+   display: none; 
+    margin-top: 15px;
+}
+.spinner{
+   border: 3px solid #f3f3f3; 
+   border-top: 3px solid #007bff;
+   border-radius: 50%;
+   height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    animation: spin 1s linear infinite;
+} 
+@keyframes spin{
+0% {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+} 
+.info p{
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+}
+.result  {
+    background: linear-gradient(45deg,#f093fb,#f5576c); 
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    
+}
+.error {
+   
+   display: none;
+   background: linear-gradient(45deg,#667eea,#764ba2);   
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 15px;
+}
